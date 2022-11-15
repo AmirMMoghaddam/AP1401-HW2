@@ -153,7 +153,14 @@ bool Trie::search(std::string query)
             return false;
         }
     }
-    return true;
+    if (currentNode->is_finished)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 Trie::Trie(std::initializer_list<std::string> query)
