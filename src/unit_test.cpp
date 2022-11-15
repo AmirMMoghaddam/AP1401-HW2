@@ -178,17 +178,22 @@
 //     EXPECT_EQ(nodes.size(), 16);
 // }
 
-// TEST(HW2Test, TEST15) {
+// TEST(HW2Test, TEST15)
+// {
 
 //     Trie move{"there", "that", "this", "does", "did"};
-//     Trie::Node* address{move.root};
-
+//     Trie::Node *address{move.root};
+//     std::cout << "move0 " << std::endl;
 //     Trie trie{std::move(move)};
+//     std::cout << "trie" << std::endl;
 //     EXPECT_EQ(address, trie.root);
-
-//     std::vector<Trie::Node*> nodes;
-//     trie.bfs([&nodes](Trie::Node*& node){nodes.push_back(node);});
+//     std::cout << address << " " << trie.root << std::endl;
+//     std::vector<Trie::Node *> nodes;
+//     trie.bfs([&nodes](Trie::Node *&node)
+//              { nodes.push_back(node); });
+//     std::cout << "2 done" << std::endl;
 //     EXPECT_EQ(nodes.size(), 16);
+//     std::cout << nodes.size() << std::endl;
 // }
 
 // TEST(HW2Test, TEST16) {

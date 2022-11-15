@@ -21,6 +21,7 @@ public:
     Trie();                                         // defult Consturctor
     Trie(std::initializer_list<std::string> query); // Constructor with List
     Trie(const Trie &trie);                         // copy
+    Trie(Trie &&trie);                              // move
     void bfs(std::function<void(Node *&node)> func);
     ~Trie();                      // destructor
     void insert(std::string str); // insert function

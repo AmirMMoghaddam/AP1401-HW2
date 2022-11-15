@@ -51,6 +51,11 @@ Trie::Trie(const Trie &trie)
     }
 }
 
+Trie::Trie(Trie &&trie) : root{trie.root}
+{
+    std::cout << "move " << std::endl;
+}
+
 void Trie::insert(std::string str)
 {
     Node *currentNode{this->root};
