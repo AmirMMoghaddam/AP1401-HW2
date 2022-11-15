@@ -20,6 +20,7 @@ public:
     Node *root;
     Trie();                                         // defult Consturctor
     Trie(std::initializer_list<std::string> query); // Constructor with List
+    Trie(const Trie &trie);                         // copy
     void bfs(std::function<void(Node *&node)> func);
     ~Trie();                      // destructor
     void insert(std::string str); // insert function
